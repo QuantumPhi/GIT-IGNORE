@@ -9,13 +9,19 @@ then
     printf "    list - List available templates\n"
     printf "    <TEMPLATE> - Create .gitignore template\n"
     printf "    <FILE> - Ignore local file\n\n"
-elif [[ "$1" == "list" ]]
+elif [[ "$1" = "list" ]]
 then
     gitignorer $1
-elif [[ -e "$(pwd)/$1" || -d "$(pwd)/$1" ]]
+elif [[ -e "$1" || -d "$1"  || -e "$(pwd)/$1" || -d "$(pwd)/$1" ]]
 then
-    echo -e "$1" >> .gitignore
-    sort .gitignore -o .gitignore
+    if [[ ! -e .gitignore ]]
+    then
+        echo -e "$1" >> .gitignore
+    elif [[ -z "$(grep -Fx "$1" .gitignore)" ]]
+    then
+        echo -e "$1" >> .gitignore
+        sort .gitignore -o .gitignore
+    fi
 elif [[ ! -z "'$(gitignorer list)' | grep -Fx '$1' > /dev/null" ]]
 then
     gitignorer create $1
