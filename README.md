@@ -14,6 +14,19 @@ I do not personally own a Mac, so I do not know how this script
 will behave in Mac OS. Please open issues or pull requests on
 bugs that are found.
 
+```
+Usage:
+    ignore [OPTIONS]
+Options:
+    [NO OPTIONS] - Print this help menu
+    list - List available templates
+    empty - Create empty gitignore
+    <TEMPLATE> - Create .gitignore template
+    <FILE> - Ignore local file
+Aliasing:
+    alias
+```
+
 Windows
 -------
 _Coming soon!_
