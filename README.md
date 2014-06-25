@@ -12,6 +12,7 @@ Mac OS X
 Put the script in your bin (Generally /usr/bin) to "install".
 
 _WARNING:_
+
 I do not personally own a Mac, so I do not know how this script
 will behave in Mac OS. Please open issues or pull requests on
 bugs that are found.
