@@ -1,15 +1,12 @@
 GIT-IGNORE
 ==========
-A script used to alias [Zach Latta's Gitignorer](https://github.com/zachlatta/gitignorer) into git, allowing for quick
+A BASH script used to alias [Zach Latta's Gitignorer](https://github.com/zachlatta/gitignorer) into git, allowing for quick
 gitignoring of files.
 
-Linux
------
-Put the script in your bin (Generally /usr/bin) to "install".
-
-Mac OS X
---------
-Put the script in your bin (Generally /usr/bin) to "install".
+UNIX
+----
+1. Put the script in your bin
+2. Execute ```chmod +x /PATH/TO/BIN/git-ignore```
 
 _WARNING:_
 
@@ -20,3 +17,5 @@ bugs that are found.
 Windows
 -------
 _Coming soon!_
+
+Licensed under the [MIT License](LICENSE)
