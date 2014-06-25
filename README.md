@@ -1,6 +1,6 @@
 GIT-IGNORE
 ==========
-A script used to alias [Zach Latta's Gitignorer](www.github.com/zachlatta/gitignorer) into git, allowing for quick
+A script used to alias [Zach Latta's Gitignorer](https://github.com/zachlatta/gitignorer) into git, allowing for quick
 gitignoring of files.
 
 Linux
