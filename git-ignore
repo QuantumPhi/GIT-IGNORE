@@ -2,10 +2,14 @@
 
 if [[ -z "$1" ]]
 then
+    > .gitignore
+elif [[ "$1" = "help" ]]
+then
     printf "\nGit Ignore\n\n"
     printf "Usage:\n"
     printf "    git ignore [OPTIONS]\n\n"
     printf "Options:\n"
+    printf "    [NO OPTION] - Create empty gitignore"
     printf "    list - List available templates\n"
     printf "    <TEMPLATE> - Create .gitignore template\n"
     printf "    <FILE> - Ignore local file\n\n"
@@ -19,10 +23,18 @@ then
         echo -e "$1" >> .gitignore
     elif [[ -z "$(grep -Fx "$1" .gitignore)" ]]
     then
+        if [[ -z $(grep -Fx "# Custom Directories/Files" .gitignore) ]]
+        then
+            echo -e "# Custom Directories/Files" >> .gitignore
+        fi
         echo -e "$1" >> .gitignore
-        sort .gitignore -o .gitignore
     fi
 elif [[ ! -z "'$(gitignorer list)' | grep -Fx '$1' > /dev/null" ]]
 then
+    if [[ -f .gitignore ]]
+    then
+        rm .gitignore
+    fi
     gitignorer create $1
+    echo -e "\n" >> .gitignore
 fi
