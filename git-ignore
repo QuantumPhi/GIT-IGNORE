@@ -9,8 +9,9 @@ then
     printf "Usage:\n"
     printf "    git ignore [OPTIONS]\n\n"
     printf "Options:\n"
-    printf "    [NO OPTION] - Create empty gitignore"
+    printf "    help - Print this help menu\n"
     printf "    list - List available templates\n"
+    printf "    [NO OPTION] - Create empty gitignore\n"
     printf "    <TEMPLATE> - Create .gitignore template\n"
     printf "    <FILE> - Ignore local file\n\n"
 elif [[ "$1" = "list" ]]
