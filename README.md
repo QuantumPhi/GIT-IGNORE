@@ -1,4 +1,4 @@
-GIT-IGNORE
+GitignoreAlias
 ==========
 A BASH script used to alias [zachlatta's Gitignorer](https://github.com/zachlatta/gitignorer) into git, allowing for quick
 gitignoring of files.
@@ -23,8 +23,6 @@ Options:
     empty - Create empty gitignore
     <TEMPLATE> - Create .gitignore template
     <FILE> - Ignore local file
-Aliasing:
-    alias
 ```
 
 Windows
